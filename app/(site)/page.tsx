@@ -1,14 +1,11 @@
 import Link from "next/link";
-import {ArrowRight, BookOpen } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button";
-import {Navbar} from "@/components/ui/navbar"
+import { ArrowRight, BookOpen } from "lucide-react";
 
+import { buttonVariants } from "@/components/ui/button";
 
 export default function HomePage() {
   return (
     <div className="min-h-dvh bg-background text-foreground">
-      <Navbar />
-
       <main className="mx-auto flex max-w-3xl flex-col items-center px-6 py-24 text-center sm:py-32">
         <span className="mb-4 inline-flex items-center rounded-full border border-border px-3 py-1 text-xs font-medium text-muted-foreground">
           System Control Panel

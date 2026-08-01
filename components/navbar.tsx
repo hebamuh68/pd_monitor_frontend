@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { AudioLines } from "lucide-react";
-
+import {Brand} from "@/components/brand"
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -9,19 +8,12 @@ const navLinks = [
   { href: "/docs", label: "Docs" },
 ];
 
-function Navbar() {
+export function Navbar() {
   return (
     <div className="sticky top-0 z-50 px-4 pt-4">
       <nav className="relative mx-auto flex h-14 max-w-5xl items-center justify-between rounded-full border border-border/60 bg-background/70 pr-2 pl-4 shadow-lg shadow-primary/5 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
         {/* Brand */}
-        <Link href="/" className="flex items-center gap-2.5">
-          <span className="grid size-8 place-items-center rounded-full bg-gradient-to-br from-primary to-[#608bc1] text-primary-foreground shadow-sm">
-            <AudioLines className="size-4" />
-          </span>
-          <span className="text-sm font-semibold tracking-tight">
-            PD Monitor
-          </span>
-        </Link>
+        <Brand/>
 
         {/* Center links (absolutely centered, hidden on mobile) */}
         <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 sm:flex">
@@ -47,5 +39,3 @@ function Navbar() {
     </div>
   );
 }
-
-export { Navbar };
