@@ -13,7 +13,9 @@ export default function RootLayout({
 }){
     return (
         <html lang="en" className={cn("font-sans", cairo.variable)}>
-            <body>{ children}</body>
+            <body>
+              { children}
+            </body>
         </html>
     )
 }
