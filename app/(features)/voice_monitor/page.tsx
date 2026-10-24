@@ -1,5 +1,15 @@
+"use client";
+import {getVoiceFeatures} from '@/lib/actions/voice_monitor'
 
 export default function VoiceMonitorPage() {
+
+  async function handleClick() {
+    const features = await getVoiceFeatures('/Users/heba28/Projects/pd_monitor_backend/voice_monitor/HC_AH/AH_114S_A89F3548-0B61-4770-B800-2E26AB3908B6.wav')
+    console.log(features)
+  }
+
+
+
   return (
     <div className="min-h-dvh bg-background text-foreground">
       <main className="mx-auto flex max-w-3xl flex-col items-center px-6 py-24 text-center sm:py-32">
@@ -16,6 +26,9 @@ export default function VoiceMonitorPage() {
           patients voices over time.
         </p>
 
+        <button onClick={handleClick}>
+          click
+        </button>
       </main>
     </div>
   );
